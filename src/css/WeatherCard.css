@@ -1,0 +1,50 @@
+.WeatherCard {
+  /* border: 1px solid #ffffffcc; */
+  box-shadow: .15rem .15rem .5rem rgba(0, 0, 0, 0.1);
+  margin: auto;
+  padding: 2rem;
+  width: 70rem;
+  animation: horizontalFlipIn 1s;
+  background: #ffffffcc;
+  border-radius:0.385714rem;
+  opacity: 30%;
+}
+
+.WeatherCard-icon-container {
+  font-size: 4.5rem;
+}
+
+.WeatherCard-icon {
+  margin: 0 0 2rem;
+}
+
+.WeatherCard-degrees {
+  font-size: 6rem;
+  margin: 0;
+}
+
+.FiveDaysWeather-card {
+  border: 1px solid #eee8aa;
+  background: #fff;
+  box-shadow: .15rem .15rem .5rem rgba(0, 0, 0, 0.1);
+  margin-top: 2%;
+  padding: 1rem;
+  width: 12rem;
+  text-align: center;
+  animation: horizontalFlipIn 1s;
+}
+/* 
+.col-md-4 {
+  width: 35%;
+  padding: 1%;
+  text-align: center;
+  margin:1%;
+  border-right: solid 1px rgb(183, 183, 183);
+}
+
+.col-md-8{
+  width: 60%;
+  padding: 1%;
+  float: left;
+  margin:5%;
+} */

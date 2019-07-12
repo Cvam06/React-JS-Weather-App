@@ -1,0 +1,60 @@
+.App {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.app_sunny {
+  display: flex;
+  flex-flow: column wrap;
+  background-image: url(../sunny-bg.jpg);
+  height: -webkit-fill-available;
+  background-attachment: fixed;
+  background-position : absolute;
+  background-size: cover;
+}
+.app_cloudy {
+  display: flex;
+  flex-flow: column wrap;
+  background-image: url(../cloudy-bg.jpg);
+  background-attachment: fixed;
+  background-position-x : absolute;
+  background-size: cover;
+  height: -webkit-fill-available;
+}
+.app_rain{
+  display: flex;
+  flex-flow: column wrap;
+  background-image: url(../rain-bg.jpg);
+  height: -webkit-fill-available;
+  background-attachment: fixed;
+  background-position : absolute;
+  background-size: cover;
+}
+.app_dust{
+  display: flex;
+  flex-flow: column wrap;
+  background-image: url(../dust-bg.jpg);
+  height: -webkit-fill-available;
+  background-attachment: fixed;
+  background-position : absolute;
+  background-size: cover;
+}
+.app_haze{
+  display: flex;
+  flex-flow: column wrap;
+  background-image: url(../haze-bg.jpg);
+  height: -webkit-fill-available;
+  background-attachment: fixed;
+  background-position : absolute;
+  background-size: cover;
+}
+
+.app_smoke{
+  display: flex;
+  flex-flow: column wrap;
+  background-image: url(../smoke-bg.jpg);
+  height: -webkit-fill-available;
+  background-attachment: fixed;
+  background-position : absolute;
+  background-size: cover;
+}
