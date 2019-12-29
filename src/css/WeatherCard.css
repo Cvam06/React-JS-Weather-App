@@ -5,9 +5,9 @@
   padding: 2rem;
   width: 70rem;
   animation: horizontalFlipIn 1s;
-  background: #ffffffcc;
+  background: #ffffff;
   border-radius:0.385714rem;
-  opacity: 30%;
+  opacity: 85%;
 }
 
 .WeatherCard-icon-container {

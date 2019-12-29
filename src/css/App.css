@@ -58,3 +58,12 @@
   background-position : absolute;
   background-size: cover;
 }
+.app_snow {
+  display: flex;
+  flex-flow: column wrap;
+  background-image: url(../snow-bg.jpg);
+  background-attachment: fixed;
+  background-position-x : absolute;
+  background-size: cover;
+  height: -webkit-fill-available;
+}

@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import "./css/App.css";
 import SearchBar from "./components/SearchBar";
 import WeatherCard from "./components/WeatherCard";
-import Favorites from "./components/Favorites";
-import FiveDaysWeather from './components/FiveDaysWeather';
-import sunny from './';
-//import API_KEY from "./config.js";
 
 class App extends Component {
   constructor(props) {
@@ -42,22 +38,25 @@ class App extends Component {
       .then(handleErrors)
       .then(resp => resp.json())
       .then(data => {
-        if (data.weather[0].main == "Clouds") {
+        if (data.weather[0].main === "Clouds") {
           this.setState({ appStyleName: "app_cloudy" })
         }
-        else if (data.weather[0].main == "Sunny") {
+        else if (data.weather[0].main === "Snow") {
+          this.setState({ appStyleName: "app_snow" })
+        }
+        else if (data.weather[0].main === "Sunny") {
           this.setState({ appStyleName: "app_sunny" })
         }
-        else if (data.weather[0].main == "Dust") {
+        else if (data.weather[0].main === "Dust") {
           this.setState({ appStyleName: "app_dust" })
         }
-        else if (data.weather[0].main == "Rain" || data.weather[0].main == "Mist" || data.weather[0].main == "Drizzle") {
+        else if (data.weather[0].main === "Rain" || data.weather[0].main === "Mist" || data.weather[0].main === "Drizzle") {
           this.setState({ appStyleName: "app_rain" })
         }
-        else if (data.weather[0].main == "Haze") {
+        else if (data.weather[0].main === "Haze") {
           this.setState({ appStyleName: "app_haze" })
         }
-        else if (data.weather[0].main == "Smoke") {
+        else if (data.weather[0].main === "Smoke") {
           this.setState({ appStyleName: "app_smoke" })
         }
         else {
@@ -153,25 +152,16 @@ class App extends Component {
     const {
       searchDone,
       weatherData,
-      hasSavedCities,
       savedCities,
       errorMessage
     } = this.state;
 
-    let fiveDaysCards = (
-      this.state.nextFiveDays.map((oneDay) => {
-        return <div class="col-md-2">
-          <FiveDaysWeather
-            oneDayData={oneDay}
-          />
-        </div>
-      })
-    )
 
     return (
       <div className={this.state.appStyleName}>
           <SearchBar
-           
+            callBackFromParent={this.callWeatherData}
+            error={errorMessage}
           />
           {searchDone && (
             <WeatherCard

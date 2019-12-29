@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "../css/WeatherCard.css";
 import "../css/weather-icons.min.css";
-import { Button } from "semantic-ui-react";
 
 class WeatherCard extends Component {
   constructor(props) {
@@ -34,23 +33,6 @@ class WeatherCard extends Component {
     const celcius = Math.round(temp - 273.15);
     const celcius_temp_max = Math.round(temp_max - 273.15);
     const celcius_temp_min = Math.round(temp_min - 273.15);
-    const saveBtn = (
-      <Button
-        positive
-        size="mini"
-        onClick={this.saveDataToLocalStorage}
-        content="Save to favorites"
-      />
-    );
-    const deleteBtn = (
-      <Button
-        negative
-        size="mini"
-        onClick={this.deleteDataFromLocalStorage}
-        content="Delete from favorites"
-      />
-    );
-    const existingCities = this.props.savedCities;
 
     let fiveDaysTable = (
       this.props.fiveDayData.map((oneDay,index) => {
@@ -61,7 +43,7 @@ class WeatherCard extends Component {
         return <tr> 
           <td> {newDate} </td>
           <td className="justify-content-center font-weight-bold"> <i className={`wi wi-owm-${oneDay.weather[0].id} WeatherCard-icon`}/> </td>
-          <td> {Math.round(oneDay.temp-273.15)}° ({Math.round(oneDay.max_temp-273.15)}°-{Math.round(oneDay.min_temp-273.15)}°)</td>
+          <td> {Math.round(oneDay.temp-273.15)}° ({Math.round(oneDay.max_temp-273.15)}°- {Math.round(oneDay.min_temp-273.15)}°)</td>
           <td> {oneDay.humidity}% </td>
         </tr>
       })
